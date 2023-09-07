@@ -12,3 +12,17 @@ D:\Theory\MAJOR ASSIGNMENTS\PTPMQL\NewApp\obj\Debug\net7.0\refint\NewApp.dll
 D:\Theory\MAJOR ASSIGNMENTS\PTPMQL\NewApp\obj\Debug\net7.0\NewApp.pdb
 D:\Theory\MAJOR ASSIGNMENTS\PTPMQL\NewApp\obj\Debug\net7.0\NewApp.genruntimeconfig.cache
 D:\Theory\MAJOR ASSIGNMENTS\PTPMQL\NewApp\obj\Debug\net7.0\ref\NewApp.dll
+D:\Theory\MAJOR ASSIGNMENTS\PTPMQL\Projects\NewApp\bin\Debug\net7.0\NewApp.exe
+D:\Theory\MAJOR ASSIGNMENTS\PTPMQL\Projects\NewApp\bin\Debug\net7.0\NewApp.deps.json
+D:\Theory\MAJOR ASSIGNMENTS\PTPMQL\Projects\NewApp\bin\Debug\net7.0\NewApp.runtimeconfig.json
+D:\Theory\MAJOR ASSIGNMENTS\PTPMQL\Projects\NewApp\bin\Debug\net7.0\NewApp.dll
+D:\Theory\MAJOR ASSIGNMENTS\PTPMQL\Projects\NewApp\bin\Debug\net7.0\NewApp.pdb
+D:\Theory\MAJOR ASSIGNMENTS\PTPMQL\Projects\NewApp\obj\Debug\net7.0\NewApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Theory\MAJOR ASSIGNMENTS\PTPMQL\Projects\NewApp\obj\Debug\net7.0\NewApp.AssemblyInfoInputs.cache
+D:\Theory\MAJOR ASSIGNMENTS\PTPMQL\Projects\NewApp\obj\Debug\net7.0\NewApp.AssemblyInfo.cs
+D:\Theory\MAJOR ASSIGNMENTS\PTPMQL\Projects\NewApp\obj\Debug\net7.0\NewApp.csproj.CoreCompileInputs.cache
+D:\Theory\MAJOR ASSIGNMENTS\PTPMQL\Projects\NewApp\obj\Debug\net7.0\NewApp.dll
+D:\Theory\MAJOR ASSIGNMENTS\PTPMQL\Projects\NewApp\obj\Debug\net7.0\refint\NewApp.dll
+D:\Theory\MAJOR ASSIGNMENTS\PTPMQL\Projects\NewApp\obj\Debug\net7.0\NewApp.pdb
+D:\Theory\MAJOR ASSIGNMENTS\PTPMQL\Projects\NewApp\obj\Debug\net7.0\NewApp.genruntimeconfig.cache
+D:\Theory\MAJOR ASSIGNMENTS\PTPMQL\Projects\NewApp\obj\Debug\net7.0\ref\NewApp.dll
