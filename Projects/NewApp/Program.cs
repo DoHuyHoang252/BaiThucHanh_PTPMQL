@@ -1,22 +1,12 @@
-﻿using NewApp.Models;
+﻿using System.Threading.Tasks.Dataflow;
+using NewApp.Models;
 public class Program{
     private static void Main(string[] args){
-        Person ps1 = new Person();
-        Person ps2 = new Person();
-        Student std = new Student();
-        Employee emp = new Employee();
-        Fruit fr = new Fruit();
-        ps1.FullName = "Do Huy Hoang";
-        ps1.Address = "Ha Noi";
-        ps1.Age = 18;
-        ps1.HienThi();
-        ps2.NhapThongTin();
-        ps2.HienThi();
-        std.NhapThongTin();
-        std.HienThi();
-        emp.NhapThongTin();
-        emp.HienThi();
-        fr.NhapThongTin();
-        fr.HienThi();
+        GiaiPhuongTrinh phuongtrinhbac1 = new GiaiPhuongTrinh();
+        GiaiPhuongTrinh phuongtrinhbac2 = new GiaiPhuongTrinh();
+        string ketqua = phuongtrinhbac1.PhuongTrinhBacNhat(1,2);
+        System.Console.WriteLine(ketqua);
+        ketqua = phuongtrinhbac2.PhuongTrinhBacHai(1,4,4);
+        System.Console.WriteLine(ketqua);
     }
 }
