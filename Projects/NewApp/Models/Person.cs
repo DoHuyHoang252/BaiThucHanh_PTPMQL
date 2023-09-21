@@ -21,7 +21,7 @@ namespace NewApp.Models
             Age = Convert.ToInt32(Console.ReadLine());
         }
         public void HienThi(){
-            System.Console.WriteLine(FullName + " - " + Address + " - " + Age);
+            System.Console.Write(FullName + " - " + Address + " - " + Age);
         }
 
         public void Display(string ten, int tuoi){

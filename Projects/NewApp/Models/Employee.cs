@@ -1,29 +1,24 @@
 namespace NewApp.Models
 {
-    public class Employee
+    public class Employee : Person
     {
-        public string MaNhanVien { get; set; }
-        public string TenNhanVien { get; set; }
-        public int Tuoi { get; set; }
-        public int LuongCoBan { get; set; }
+        public string EmployeeID { get; set; }
+        public int SalaryBasic { get; set; }
 
         public Employee(){
-            MaNhanVien = "2021050781";
-            TenNhanVien = "Do Huy Hoang";
+            EmployeeID = "2021050781";
         }
 
         public void NhapThongTin(){
+            base.NhapThongTin();
             System.Console.Write("Ma nhan vien: ");
-            MaNhanVien = Console.ReadLine();
-            System.Console.Write("Ten nhan vien: ");
-            TenNhanVien = Console.ReadLine();
-            System.Console.Write("Tuoi: ");
-            Tuoi = Convert.ToInt32(Console.ReadLine());
+            EmployeeID = Console.ReadLine();
             System.Console.Write("Luong co ban: ");
-            LuongCoBan = Convert.ToInt32(Console.ReadLine());
+            SalaryBasic = Convert.ToInt32(Console.ReadLine());
         }
         public void HienThi(){
-            System.Console.WriteLine(MaNhanVien + " - " + TenNhanVien + " - " + Tuoi + " - " + LuongCoBan);
+            base.HienThi();
+            System.Console.WriteLine(" - " + EmployeeID + " - " + SalaryBasic);
         }
 
         public void HienThi(string TNV,int LCB){
@@ -31,7 +26,7 @@ namespace NewApp.Models
         }
 
         public int Luong(double hsl, int pc){
-            return Convert.ToInt32(LuongCoBan * hsl + pc);
+            return Convert.ToInt32(SalaryBasic * hsl + pc);
         }
     }
 }

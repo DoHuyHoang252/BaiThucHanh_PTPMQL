@@ -1,37 +1,23 @@
 namespace NewApp.Models
 {
-    public class Student
+    public class Student : Person
     {
-        public string HoTen { get; set; }
-        public string DiaChi { get; set; }
-        public int Tuoi { get; set; }
-        public string SoDienThoai { get; set; }
-
-        public Student(){
-            HoTen = "Do Huy Hoang";
-            DiaChi = "Ha Noi";
-            Tuoi = 21;
-            SoDienThoai = "0396987532";
-        }
+        public string StudentCode {get; set;}
 
         public void NhapThongTin(){
-            System.Console.Write("Ho ten sinh vien: ");
-            HoTen = Console.ReadLine();
-            System.Console.Write("Dia chi: ");
-            DiaChi = Console.ReadLine();
-            System.Console.Write("Tuoi: ");
-            Tuoi = Convert.ToInt32(Console.ReadLine());
-            System.Console.Write("So dien thoai: ");
-            SoDienThoai = Console.ReadLine();
+            base.NhapThongTin();
+            System.Console.Write("Ma Sinh Vien: ");
+            StudentCode = Console.ReadLine();
         }
         public void HienThi(){
-            System.Console.WriteLine(HoTen + " - " + DiaChi + " - " + Tuoi + " - " + SoDienThoai);
+            base.HienThi();
+            System.Console.WriteLine("-Ma sinh vien: {0}", StudentCode);
         }
         public void HienThi(string HT, string SDT){
             System.Console.WriteLine("Sinh vien {0} co so dien thoai la {1}", HT, SDT);
         }
         public int NamSinh(){
-            return 2023 - Tuoi;
+            return 2023 - Age;
         }
     }
 }
