@@ -24,7 +24,7 @@ namespace NewApp.Models
         }
         public void HienThi(){
             base.HienThi();
-            System.Console.WriteLine(" - " + EmployeeID + " - " + SalaryBasic);
+            System.Console.Write(" - " + EmployeeID + " - " + SalaryBasic);
         }
 
         public void HienThi(string TNV,int LCB){

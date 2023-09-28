@@ -11,7 +11,7 @@ namespace NewApp.Models
         }
         public void HienThi(){
             base.HienThi();
-            System.Console.WriteLine("-Ma sinh vien: {0}", StudentCode);
+            System.Console.Write(" - " + StudentCode);
         }
         public void HienThi(string HT, string SDT){
             System.Console.WriteLine("Sinh vien {0} co so dien thoai la {1}", HT, SDT);
