@@ -29,8 +29,8 @@ namespace NewApp.Models
             }
             if (delta > 0)
             {
-                x1 = (float)((-b + Math.Sqrt(delta)) / (2 * a));
-                x2 = (float)((-b - Math.Sqrt(delta)) / (2 * a));
+                x1 = (double)((-b + Math.Sqrt(delta)) / (2 * a));
+                x2 = (double)((-b - Math.Sqrt(delta)) / (2 * a));
                 return "Phuong trinh co 2 nghiem la: x1 = " + x1 + "va x2 = " + x2;
             }
             else if (delta == 0)

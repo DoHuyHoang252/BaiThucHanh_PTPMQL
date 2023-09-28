@@ -14,7 +14,13 @@ namespace NewApp.Models
             System.Console.Write("Ma nhan vien: ");
             EmployeeID = Console.ReadLine();
             System.Console.Write("Luong co ban: ");
-            SalaryBasic = Convert.ToInt32(Console.ReadLine());
+            try
+            {
+                SalaryBasic = Convert.ToInt32(Console.ReadLine());
+            } catch {
+                SalaryBasic = 0;
+            }
+            
         }
         public void HienThi(){
             base.HienThi();
