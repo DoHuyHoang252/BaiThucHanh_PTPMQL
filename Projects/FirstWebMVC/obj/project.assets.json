@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Theory\\MAJOR ASSIGNMENTS\\PTPMQL\\FirstWebMVC\\FirstWebMVC.csproj",
+      "projectUniqueName": "D:\\Theory\\MAJOR ASSIGNMENTS\\PTPMQL\\Projects\\FirstWebMVC\\FirstWebMVC.csproj",
       "projectName": "FirstWebMVC",
-      "projectPath": "D:\\Theory\\MAJOR ASSIGNMENTS\\PTPMQL\\FirstWebMVC\\FirstWebMVC.csproj",
+      "projectPath": "D:\\Theory\\MAJOR ASSIGNMENTS\\PTPMQL\\Projects\\FirstWebMVC\\FirstWebMVC.csproj",
       "packagesPath": "C:\\Users\\hoang\\.nuget\\packages\\",
-      "outputPath": "D:\\Theory\\MAJOR ASSIGNMENTS\\PTPMQL\\FirstWebMVC\\obj\\",
+      "outputPath": "D:\\Theory\\MAJOR ASSIGNMENTS\\PTPMQL\\Projects\\FirstWebMVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hoang\\AppData\\Roaming\\NuGet\\NuGet.Config"
