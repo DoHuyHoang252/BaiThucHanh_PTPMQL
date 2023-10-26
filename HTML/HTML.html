@@ -1,32 +1,24 @@
 <!DOCTYPE html>
 <html>
 <body>
-<div>Do Huy Hoang - 2021050781</div>
-<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
-Your browser does not support the HTML canvas tag.</canvas>
+<p>Do Huy Hoang - 202105781</p>
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40"
+  stroke="green" stroke-width="4" fill="yellow" />
+Sorry, your browser does not support inline SVG.
+</svg>
 
-<script>
-  var c = document.getElementById("myCanvas");
-  var ctx = c.getContext("2d");
-  ctx.beginPath();
-  ctx.arc(95,50,40,0,2*Math.PI);
-  ctx.stroke();
-  </script> 
+<svg width="400" height="100">
+  <rect width="400" height="100" 
+  style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+Sorry, your browser does not support inline SVG.
+</svg>
 
-<script>
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-
-// Create gradient
-var grd = ctx.createRadialGradient(75,50,5,90,60,100);
-grd.addColorStop(0,"red");
-grd.addColorStop(1,"white");
-
-// Fill with gradient
-ctx.fillStyle = grd;
-ctx.fillRect(10,10,150,80);
-</script>
-
+<svg width="400" height="180">
+  <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+  style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+</svg>
+ 
 </body>
 </html>
 
