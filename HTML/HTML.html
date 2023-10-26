@@ -1,37 +1,31 @@
 <!DOCTYPE html>
 <html>
 <body>
+<div>Do Huy Hoang - 2021050781</div>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML canvas tag.</canvas>
 
-  <p>Do Huy Hoang - 2021050781</p>
+<script>
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  ctx.beginPath();
+  ctx.arc(95,50,40,0,2*Math.PI);
+  ctx.stroke();
+  </script> 
 
-<h1>The input formmethod Attribute</h1>
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
 
-<p>The formmethod attribute defines the HTTP method for sending form-data to the action URL.</p>
+// Create gradient
+var grd = ctx.createRadialGradient(75,50,5,90,60,100);
+grd.addColorStop(0,"red");
+grd.addColorStop(1,"white");
 
-<form action="/action_page.php" method="get" target="_blank">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <input type="submit" value="Submit using GET">
-  <input type="submit" formmethod="post" value="Submit using POST">
-</form>
-
-<form action="/action_page.php">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <input type="submit" value="Submit">
-  <input type="submit" formtarget="_blank" value="Submit to a new window/tab">
-</form>
-
-<form action="/action_page.php">
-  <label for="email">Enter your email:</label>
-  <input type="email" id="email" name="email" required><br><br>
-  <input type="submit" value="Submit">
-  <input type="submit" formnovalidate="formnovalidate" value="Submit without validation">
-</form>
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(10,10,150,80);
+</script>
 
 </body>
 </html>
