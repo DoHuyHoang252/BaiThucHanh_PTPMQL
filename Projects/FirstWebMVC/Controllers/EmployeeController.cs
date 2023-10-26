@@ -11,7 +11,7 @@ namespace FirstWebMVC.Controllers
 
         [HttpPost]
         public IActionResult Index(Employee emp){
-            string strResult = "Hello " + emp.EmployeeID + " - " + emp.FullName + " - " + emp.Position;
+            string strResult = "Hello " + emp.EmployeeID + " - " + emp.Age;
             ViewBag.noti = strResult;
             return View();
         }
