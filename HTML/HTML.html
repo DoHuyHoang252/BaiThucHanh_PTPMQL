@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+p {
+  color: red;
+  text-align: center;
+} 
+</style>
+</head>
 <body>
 <p>Do Huy Hoang - 2021050781</p>
-<h1>Getting server updates</h1>
-<div id="result"></div>
-
-<script>
-if(typeof(EventSource) !== "undefined") {
-  var source = new EventSource("demo_sse.php");
-  source.onmessage = function(event) {
-    document.getElementById("result").innerHTML += event.data + "<br>";
-  };
-} else {
-  document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
-}
-</script>
+<p>Hello World!</p>
+<p>These paragraphs are styled with CSS.</p>
 
 </body>
 </html>
