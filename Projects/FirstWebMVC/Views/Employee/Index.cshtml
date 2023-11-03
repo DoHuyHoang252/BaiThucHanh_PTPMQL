@@ -1,18 +1,43 @@
-<h1>Đỗ Huy Hoàng - 2021050781</h1>
-<div class="w3-container w3-green">
-  <h2>EMPLOYEE FORM</h2>
-</div>
+@model IEnumerable<FirstWebMVC.Models.Employee>
+<style>
+  a:hover{
+    color: green;
+  }
+</style>
+@{
+    ViewData["Title"]= "Index";
+}
+<h1>Employee</h1>
 
-<form asp-action="Index" class="w3-container">
+<p>
+  <a asp-action="Create">Create New</a>
+</p>
+<table class="ws-table-all w3-bordered w3-striped w3-border test w3-hoverable w3-table" style="color:#000">
+  <thread>
+    <tr class="w3-green">
+      <th>
+        @Html.DisplayNameFor(model =>model.EmployeeID)
+      </th>
+      <th>
+        @Html.DisplayNameFor(model =>model.Age)
+      </th>
+    </tr>
+  </thread>
+  <tbody>
+  @foreach (var item in Model){
+    <tr>
 
-  <label>EmployeeID</label>
-  <input name="EmployeeID" class="w3-input" type="text">
-
-  <label>Age</label>
-  <input name="Age" class="w3-input" type="text">
-
-
-  <button class="w3-btn w3-green w3-right">Send Data</button>
-
-</form>
-<h2>@ViewBag.noti</h2>
+      <td>
+        @Html.DisplayFor(modelItem => item.EmployeeID)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.Age)
+      </td>
+      <td>
+        <a asp-action="Edit" asp-route-id="@item.EmployeeID">Edit</a>
+        <a asp-action="Delete" asp-route-id="@item.EmployeeID">Delete</a>
+      </td>
+    </tr>
+  }
+  </tbody>
+</table>
