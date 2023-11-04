@@ -1,0 +1,34 @@
+@model FirstWebMVC.Models.HeThongPhanPhoi
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>HeThongPhanPhoi</h4>
+<hr />
+<div class="w3-card-4">
+    <div class="w3-container w3-green">
+        <h4>HeThongPhanPhoi</h4>
+    </div>
+        <form asp-action="Edit" class="container">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="MaHTPP">
+            <div class="form-group">
+                <label asp-for="TenHTPP" class="control-label"></label>
+                <input asp-for="TenHTPP" class="form-control w3-input">
+                <span asp-validation-for="TenHTPP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="w3-button w3-green w3-hover-light-green w3-round">
+            </div>
+        </form>
+    </div>
+<div>
+    <a asp-action="Index" class="w3-hover-text-green">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

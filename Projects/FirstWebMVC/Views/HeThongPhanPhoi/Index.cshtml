@@ -1,0 +1,39 @@
+@model IEnumerable<FirstWebMVC.Models.HeThongPhanPhoi>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="ws-table-all w3-bordered w3-striped w3-border test w3-hoverable w3-table" style="color:#000">
+  <thread>
+    <tr class="w3-green">
+      <th>
+        @Html.DisplayNameFor(model => model.MaHTPP)
+      </th>
+      <th>
+        @Html.DisplayNameFor(model => model.TenHTPP)
+      </th>
+    </tr>
+  </thread>
+  <tbody>
+  @foreach (var item in Model){
+    <tr>
+      <td>
+        @Html.DisplayFor(modelItem => item.MaHTPP)
+      </td>
+      <td>
+        @Html.DisplayFor(modelItem => item.TenHTPP)
+      </td>
+      <td>
+        <a asp-action="Edit" asp-route-id="@item.MaHTPP">Edit</a>
+        <a asp-action="Delete" asp-route-id="@item.MaHTPP">Delete</a>
+      </td>
+    </tr>
+  }
+  </tbody>
+</table>
