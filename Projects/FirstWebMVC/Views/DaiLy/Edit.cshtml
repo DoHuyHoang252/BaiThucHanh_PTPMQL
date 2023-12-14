@@ -6,47 +6,47 @@
 
 <h1>Edit</h1>
 
+<h4>DaiLy</h4>
 <hr />
-<div class="w3-card-4">
-
-    <div class="w3-container w3-green">
-        <h4>DaiLy</h4>
-    </div>
-        <form asp-action="Edit" class="container">
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="MaDaiLy">
+            <input type="hidden" asp-for="MaDaiLy" />
             <div class="form-group">
                 <label asp-for="TenDaiLy" class="control-label"></label>
-                <input asp-for="TenDaiLy" class="form-control w3-input">
+                <input asp-for="TenDaiLy" class="form-control" />
                 <span asp-validation-for="TenDaiLy" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="DiaChi" class="control-label"></label>
-                <input asp-for="DiaChi" class="form-control w3-input">
+                <input asp-for="DiaChi" class="form-control" />
                 <span asp-validation-for="DiaChi" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="NguoiDaiDien" class="control-label"></label>
-                <input asp-for="NguoiDaiDien" class="form-contro w3-input">
+                <input asp-for="NguoiDaiDien" class="form-control" />
                 <span asp-validation-for="NguoiDaiDien" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="DienThoai" class="control-label"></label>
-                <input asp-for="DienThoai" class="form-contro w3-input">
+                <input asp-for="DienThoai" class="form-control" />
                 <span asp-validation-for="DienThoai" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="MaHTPP" class="control-label"></label>
-                <input asp-for="MaHTPP" class="form-contro w3-input">
+                <input asp-for="MaHTPP" class="form-control" />
                 <span asp-validation-for="MaHTPP" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="w3-button w3-green w3-hover-light-green w3-round">
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>
+</div>
+
 <div>
-    <a asp-action="Index" class="w3-hover-text-green">Back to List</a>
+    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

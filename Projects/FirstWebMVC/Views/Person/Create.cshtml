@@ -4,7 +4,20 @@
     ViewData["Title"]= "Create";
 }
 <h1>Create</h1>
-
+<hr>
+    <div class=" w3-card w3-white container w3-round-large" style="width:50%">
+        <form asp-action="Upload"  enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="col-md-8">
+                    <label for="">Nhập thông tin từ Excel:</label>
+                    <input type="file" name="file" class="">
+                </div>
+                <div class="col-md-4">
+                    <input type="submit" value="Tải lên" class="w3-margin btn btn-outline-info">
+                </div>
+            </div>
+        </form>
+    </div>
 <hr>
 <div class="w3-card-4">
     <div class="w3-container w3-green">

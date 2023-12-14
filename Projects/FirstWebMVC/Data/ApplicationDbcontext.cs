@@ -9,6 +9,8 @@ namespace FirstWebMVC.Data
         {}
         public DbSet<Person> Person {get; set;}
         public DbSet<Employee> Employee {get; set;}
+        public DbSet<Author> Author { get; set; } = default!;
+        public DbSet<Book> Book { get; set; } = default!;
         public DbSet<HeThongPhanPhoi> HeThongPhanPhoi { get; set; } = default!;
         public DbSet<DaiLy> DaiLy { get; set; } = default!;
     }

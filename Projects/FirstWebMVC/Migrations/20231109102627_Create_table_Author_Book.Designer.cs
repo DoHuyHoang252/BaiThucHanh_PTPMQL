@@ -10,14 +10,49 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FirstWebMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbcontext))]
-    [Migration("20231104100451_Create_table_HeThongPhanPhoi")]
-    partial class Create_table_HeThongPhanPhoi
+    [Migration("20231109102627_Create_table_Author_Book")]
+    partial class Create_table_Author_Book
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.13");
+
+            modelBuilder.Entity("FirstWebMVC.Models.Author", b =>
+                {
+                    b.Property<int>("AuthorId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("AuthorName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("AuthorId");
+
+                    b.ToTable("Author");
+                });
+
+            modelBuilder.Entity("FirstWebMVC.Models.Book", b =>
+                {
+                    b.Property<int>("BookId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("AuthorId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("BookId");
+
+                    b.HasIndex("AuthorId");
+
+                    b.ToTable("Book");
+                });
 
             modelBuilder.Entity("FirstWebMVC.Models.DaiLy", b =>
                 {
@@ -45,6 +80,8 @@ namespace FirstWebMVC.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasKey("MaDaiLy");
+
+                    b.HasIndex("MaHTPP");
 
                     b.ToTable("DaiLy");
                 });
@@ -101,6 +138,28 @@ namespace FirstWebMVC.Migrations
                     b.ToTable("Employee");
                 });
 
+            modelBuilder.Entity("FirstWebMVC.Models.Book", b =>
+                {
+                    b.HasOne("FirstWebMVC.Models.Author", "Author")
+                        .WithMany("Books")
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Author");
+                });
+
+            modelBuilder.Entity("FirstWebMVC.Models.DaiLy", b =>
+                {
+                    b.HasOne("FirstWebMVC.Models.HeThongPhanPhoi", "HeThongPhanPhoi")
+                        .WithMany()
+                        .HasForeignKey("MaHTPP")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("HeThongPhanPhoi");
+                });
+
             modelBuilder.Entity("FirstWebMVC.Models.Employee", b =>
                 {
                     b.HasOne("FirstWebMVC.Models.Person", null)
@@ -108,6 +167,11 @@ namespace FirstWebMVC.Migrations
                         .HasForeignKey("FirstWebMVC.Models.Employee", "PersonID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("FirstWebMVC.Models.Author", b =>
+                {
+                    b.Navigation("Books");
                 });
 #pragma warning restore 612, 618
         }

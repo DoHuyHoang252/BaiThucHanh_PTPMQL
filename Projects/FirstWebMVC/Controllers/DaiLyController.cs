@@ -48,6 +48,7 @@ namespace FirstWebMVC.Controllers
         // GET: DaiLy/Create
         public IActionResult Create()
         {
+            ViewData["MaHTPP"] = new SelectList(_context.HeThongPhanPhoi, "MaHTPP", "MaHTPP");
             return View();
         }
 
@@ -64,6 +65,7 @@ namespace FirstWebMVC.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["MaHTPP"] = new SelectList(_context.Author, "MaHTPP", "MaHTPP", daiLy.MaHTPP);
             return View(daiLy);
         }
 

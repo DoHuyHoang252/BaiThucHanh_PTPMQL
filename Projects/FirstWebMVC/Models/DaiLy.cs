@@ -11,8 +11,7 @@ namespace FirstWebMVC.Models
         public string DiaChi { get; set; }
         public string NguoiDaiDien { get; set; }
         public string DienThoai { get; set; }
-        [ForeignKey("HeThongPhanPhoi")]
         public string MaHTPP { get; set; }
-
+        public HeThongPhanPhoi? HeThongPhanPhoi{get; set;}
     }
 }
